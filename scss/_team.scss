@@ -1,0 +1,108 @@
+.team {
+  background-image: url('../images/bg-curve-desktop.svg');
+  background-size: cover;
+  background-position: 46% center;
+  overflow: hidden;
+  padding: 100px 0;
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 40px; // between columns 
+    .text {
+      h2 {
+        font-size: 30px;
+        color: $VeryDarkBlue;
+        margin-bottom: 40px;
+      }
+      p {
+        line-height: 1.6;
+        color: $VeryDarkBlue;
+        font-size: 1rem;
+      }
+      .last {
+        margin: 25px 0;
+      }
+      .link {
+        color: $ModerateCyan;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 167px;
+          height: 2px;
+          background-color: $ModerateCyan;
+        }
+        a {
+          color: $ModerateCyan;
+          font-size: 1rem;
+        }
+      }
+    }
+    .img {
+      width: 540px;
+      img {
+        width: 100%;
+      }
+    }
+    .resume-box {
+      background-color: #fff;
+      padding: 25px 30px;
+      width: 470px;
+      overflow: hidden;
+      border-radius: 7px;
+      > p {
+        margin: 6px 0 20px;
+        line-height: 1.6;
+        width: 80%;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        img {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          padding: 3px;
+          background-color: #fff;
+          margin-right: 15px;
+          position: relative;
+          top: -7px;
+        }
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    margin-top: 100px;
+    .content {
+      grid-template-columns: 1fr;
+      > .text {
+        text-align: center;
+        .link {
+          &::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      .img {
+        margin-top: 50px;
+      }
+      .resume-box {
+        margin: 70px auto 0;
+      }
+    }
+  }
+}
